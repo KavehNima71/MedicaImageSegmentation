@@ -37,6 +37,9 @@ As shown in the figure, the tumor (pink thick line) is close to the stomach (red
 
 I used the U-Net architecture for this. U-Net is an advanced convolutional neural network architecture specifically designed for medical image segmentation tasks. Named after its distinctive U-shaped structure, this model was first introduced in 2015 by researchers at the University of Freiburg for microscopic image segmentation and quickly became the gold standard in medical image processing.
 
+![3](https://github.com/user-attachments/assets/7c4d1013-c516-42e1-b600-a46ca57779ed)
+
+
 The U-Net architecture consists of two main pathways: the contracting path (encoder) and the expansive path (decoder). The contracting path processes the input image through successive convolutional and max-pooling layers, gradually reducing image dimensions while extracting increasingly complex features. Conversely, the expansive path utilizes transposed convolution operations and skip connections to simultaneously restore the original image dimensions and recover lost spatial details.
 
 The key advantage of U-Net lies in its skip connections, which link corresponding layers in the contracting and expansive paths. This unique feature enables the model to preserve both high-level semantic features and precise spatial details simultaneously - a critical capability for medical applications requiring accurate delineation of organ boundaries and lesions.
