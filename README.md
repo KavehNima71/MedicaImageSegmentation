@@ -1,11 +1,23 @@
 ![1](https://github.com/user-attachments/assets/0ea7c8a3-8c64-45d0-b263-6598ad488d63)
 <h1 align="center">Medical Image Segmentation</h1>
 
-This repository serves as the template for the third project in the Deep Catalyst course, focusing on medical image segmentation. Explore and utilize this template to kickstart your own medical image segmentation projects, leverage best practices, and accelerate your journey into the world of precise medical diagnostics through deep learning.
-
 ## 1. Problem Statement
-In this section, you'll find a comprehensive overview of the problem being addressed in the project.
+Medical Image Segmentation is the process of dividing medical images (like MRI, CT, or X-ray scans) into distinct regions to identify and analyze anatomical structures, abnormalities, or areas of interest at the pixel/voxel level.
 
+**Key Types & Uses:**
+
+- Organ/Tissue Segmentation – Isolates structures (e.g., brain, liver, tumors) for diagnosis or surgery planning.
+
+- Lesion/Tumor Segmentation – Highlights diseased areas (e.g., cancerous tumors) for monitoring and treatment.
+
+- Cell Segmentation – Identifies individual cells in microscopy images for research (e.g., cancer cell detection).
+
+**Why It Matters:**
+- Improves diagnostic accuracy (e.g., measuring tumor size).
+
+- Guides radiation therapy and surgical planning.
+
+- Enables AI-driven analysis (e.g., early disease detection).
 ## 2. Related Works
 This section explores existing research and solutions related to medical image segmentation.
 
