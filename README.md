@@ -18,6 +18,14 @@ Medical Image Segmentation is the process of dividing medical images (like MRI, 
 - Guides radiation therapy and surgical planning.
 
 - Enables AI-driven analysis (e.g., early disease detection).
+
+This project aims to develop an AI-powered solution for automated segmentation of MRI images. The primary focus is on creating a deep learning model capable of accurately differentiating between three key regions: the stomach, intestines, and cancerous tumors. In current practice, physicians must manually annotate these organs in daily scans. This process is not only time-consuming but also prone to inaccuracies due to daily anatomical variations in patients and human error. The manual approach significantly prolongs treatment preparation time while potentially compromising targeting precision in radiation therapy.
+
+![2](https://github.com/user-attachments/assets/5ef60d3b-589e-4150-93ee-c4c81ce6e502)
+
+As shown in the figure, the tumor (pink thick line) is close to the stomach (red thick line). High doses of radiation are directed to the tumor while avoiding the stomach. The dose levels are represented by the rainbow of outlines, with higher doses represented by red and lower doses represented by green.
+
+Cancer takes enough of a toll. If successful, you'll enable radiation oncologists to safely deliver higher doses of radiation to tumors while avoiding the stomach and intestines. This will make cancer patients' daily treatments faster and allow them to get more effective treatment with less side effects and better long-term cancer control.
 ## 2. Related Works
 This section explores existing research and solutions related to medical image segmentation.
 
