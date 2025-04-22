@@ -34,7 +34,12 @@ As shown in the figure, the tumor (pink thick line) is close to the stomach (red
 - [**The Fully Convolutional Transformer for Medical Image Segmentation**](https://arxiv.org/abs/2206.00566)
 
 ## 3. The Proposed Method
-Here, the proposed approach for solving the problem is detailed. It covers the algorithms, techniques, or deep learning models to be applied, explaining how they address the problem and why they were chosen.
+
+I used the U-Net architecture for this. U-Net is an advanced convolutional neural network architecture specifically designed for medical image segmentation tasks. Named after its distinctive U-shaped structure, this model was first introduced in 2015 by researchers at the University of Freiburg for microscopic image segmentation and quickly became the gold standard in medical image processing.
+
+The U-Net architecture consists of two main pathways: the contracting path (encoder) and the expansive path (decoder). The contracting path processes the input image through successive convolutional and max-pooling layers, gradually reducing image dimensions while extracting increasingly complex features. Conversely, the expansive path utilizes transposed convolution operations and skip connections to simultaneously restore the original image dimensions and recover lost spatial details.
+
+The key advantage of U-Net lies in its skip connections, which link corresponding layers in the contracting and expansive paths. This unique feature enables the model to preserve both high-level semantic features and precise spatial details simultaneously - a critical capability for medical applications requiring accurate delineation of organ boundaries and lesions.
 
 ## 4. Implementation
 This section delves into the practical aspects of the project's implementation.
