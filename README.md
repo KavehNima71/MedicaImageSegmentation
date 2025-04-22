@@ -25,9 +25,13 @@ This project aims to develop an AI-powered solution for automated segmentation o
 
 As shown in the figure, the tumor (pink thick line) is close to the stomach (red thick line). High doses of radiation are directed to the tumor while avoiding the stomach. The dose levels are represented by the rainbow of outlines, with higher doses represented by red and lower doses represented by green.
 
-Cancer takes enough of a toll. If successful, you'll enable radiation oncologists to safely deliver higher doses of radiation to tumors while avoiding the stomach and intestines. This will make cancer patients' daily treatments faster and allow them to get more effective treatment with less side effects and better long-term cancer control.
 ## 2. Related Works
-This section explores existing research and solutions related to medical image segmentation.
+
+- [**U-Net: Convolutional Networks for Biomedical Image Segmentation**](https://arxiv.org/abs/1505.04597)
+
+- [**UNet++: A Nested U-Net Architecture for Medical Image Segmentation**](https://arxiv.org/abs/1807.10165)
+
+- [**The Fully Convolutional Transformer for Medical Image Segmentation**](https://arxiv.org/abs/2206.00566)
 
 ## 3. The Proposed Method
 Here, the proposed approach for solving the problem is detailed. It covers the algorithms, techniques, or deep learning models to be applied, explaining how they address the problem and why they were chosen.
