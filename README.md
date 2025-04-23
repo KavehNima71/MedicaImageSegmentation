@@ -57,11 +57,20 @@ Based on the provided text files containing the split information, we organized 
 - **valid-subset.csv:** IDs, large_bowel, small_bowel, stomach, image_paths, case_id, day, slice,	width, height and counts for validation objects.
 - **test-subset.csv:** IDs, large_bowel, small_bowel, stomach, image_paths, case_id, day, slice,	width, height and counts for test objects.
 
-Visualization of a batch of images and target masks:
+In the training dataset, the number of samples corresponding to each class is indicated below: Large bowel: 10,143 Small bowel: 8,190 Stomach: 6,191
+
+**Visualization of a batch of images and target masks:**
 
 ![5](https://github.com/user-attachments/assets/187fec25-8a56-4d2b-90d1-88c2c8aa5fb9)
 
 **red: large_bowel, green: small_bowel, blue: stomach**
+
+Plot histogram of the number of samples per case:
+![6](https://github.com/user-attachments/assets/035b00ea-fe80-49c1-87d1-b9c68b36c82e)
+
+ Plot histogram of image sizes:
+ 
+ ![7](https://github.com/user-attachments/assets/c8d49558-56a2-4655-9bde-41d3c650d910)
 
 ### 4.2. Model
 In this subsection, the architecture and specifics of the deep learning model employed for the segmentation task are presented. It describes the model's layers, components, libraries, and any modifications made to it.
