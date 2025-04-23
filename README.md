@@ -45,13 +45,17 @@ Under this subsection, you'll find information about the dataset used for the me
 
 The dataset is MRIs of patients provided by the UW-Madison Carbone Cancer Center. The dataset contains a file named train.csv, which includes 115,488 rows. Each image has three parts: small bowel, large bowel, and stomach, which define these three regions. The annotations are provided in a csv format with the segmented areas represented as RLE-encoded masks and the images are in 16-bit grayscale PNG format. It would typically need to decode the RLE encoded masks to create pixel-wise binary masks. An empty segmentation entry represents no mask presented for the class in the MRI scan slice.
 
-**Files**
-
+**Files:**
 - **train.csv:** IDs and masks for all training objects. 
 - **train.txt:** case IDs for training objects. 
 - **validation.txt:** case IDs for validation objects. 
 - **test.txt:** case IDs for test objects. 
-- **train:** a folder of case/day folders, each containing slice images for a particular case on a given day. 
+- **train:** a folder of case/day folders, each containing slice images for a particular case on a given day.
+
+Based on the provided text files containing the split information, we organized the dataset into separate training, validation and test subsets.
+- **train-subset.csv:** IDs, large_bowel, small_bowel, stomach, image_paths, case_id, day, slice,	width, height and counts for training objects.
+- **valid-subset.csv:** IDs, large_bowel, small_bowel, stomach, image_paths, case_id, day, slice,	width, height and counts for validation objects.
+- **test-subset.csv:** IDs, large_bowel, small_bowel, stomach, image_paths, case_id, day, slice,	width, height and counts for test objects.
 
 ### 4.2. Model
 In this subsection, the architecture and specifics of the deep learning model employed for the segmentation task are presented. It describes the model's layers, components, libraries, and any modifications made to it.
