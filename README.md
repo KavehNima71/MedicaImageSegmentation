@@ -5,18 +5,13 @@
 Medical Image Segmentation is the process of dividing medical images (like MRI, CT, or X-ray scans) into distinct regions to identify and analyze anatomical structures, abnormalities, or areas of interest at the pixel/voxel level.
 
 **Key Types & Uses:**
-
 - Organ/Tissue Segmentation – Isolates structures (e.g., brain, liver, tumors) for diagnosis or surgery planning.
-
 - Lesion/Tumor Segmentation – Highlights diseased areas (e.g., cancerous tumors) for monitoring and treatment.
-
 - Cell Segmentation – Identifies individual cells in microscopy images for research (e.g., cancer cell detection).
 
 **Why It Matters:**
 - Improves diagnostic accuracy (e.g., measuring tumor size).
-
 - Guides radiation therapy and surgical planning.
-
 - Enables AI-driven analysis (e.g., early disease detection).
 
 This project aims to develop an AI-powered solution for automated segmentation of MRI images. The primary focus is on creating a deep learning model capable of accurately differentiating between three key regions: the stomach, intestines, and cancerous tumors. In current practice, physicians must manually annotate these organs in daily scans. This process is not only time-consuming but also prone to inaccuracies due to daily anatomical variations in patients and human error. The manual approach significantly prolongs treatment preparation time while potentially compromising targeting precision in radiation therapy.
@@ -28,9 +23,7 @@ As shown in the figure, the tumor (pink thick line) is close to the stomach (red
 ## 2. Related Works
 
 - [**U-Net: Convolutional Networks for Biomedical Image Segmentation**](https://arxiv.org/abs/1505.04597)
-
 - [**UNet++: A Nested U-Net Architecture for Medical Image Segmentation**](https://arxiv.org/abs/1807.10165)
-
 - [**The Fully Convolutional Transformer for Medical Image Segmentation**](https://arxiv.org/abs/2206.00566)
 
 ## 3. The Proposed Method
@@ -48,7 +41,17 @@ The key advantage of U-Net lies in its skip connections, which link correspondin
 This section delves into the practical aspects of the project's implementation.
 
 ### 4.1. Dataset
-Under this subsection, you'll find information about the dataset used for the medical image segmentation task. It includes details about the dataset source, size, composition, preprocessing, and loading applied to it. Dataset
+Under this subsection, you'll find information about the dataset used for the medical image segmentation task. It includes details about the dataset source, size, composition, preprocessing, and loading applied to it. [**Dataset**](https://www.kaggle.com/competitions/uw-madison-gi-tract-image-segmentation/overview)
+
+The dataset is MRIs of patients provided by the UW-Madison Carbone Cancer Center. The dataset contains a file named train.csv, which includes 115,488 rows. Each image has three parts: small bowel, large bowel, and stomach, which define these three regions. The annotations are provided in a csv format with the segmented areas represented as RLE-encoded masks and the images are in 16-bit grayscale PNG format. It would typically need to decode the RLE encoded masks to create pixel-wise binary masks. An empty segmentation entry represents no mask presented for the class in the MRI scan slice.
+
+**Files**
+
+- **train.csv:** IDs and masks for all training objects. 
+- **train.txt:** case IDs for training objects. 
+- **validation.txt:** case IDs for validation objects. 
+- **test.txt:** case IDs for test objects. 
+- **train:** a folder of case/day folders, each containing slice images for a particular case on a given day. 
 
 ### 4.2. Model
 In this subsection, the architecture and specifics of the deep learning model employed for the segmentation task are presented. It describes the model's layers, components, libraries, and any modifications made to it.
