@@ -73,13 +73,43 @@ Plot histogram of the number of samples per case:
  ![7](https://github.com/user-attachments/assets/c8d49558-56a2-4655-9bde-41d3c650d910)
 
 ### 4.2. Model
-In this subsection, the architecture and specifics of the deep learning model employed for the segmentation task are presented. It describes the model's layers, components, libraries, and any modifications made to it.
+This project utilizes the [**Segmentation Models PyTorch**](https://segmentation-modelspytorch.readthedocs.io/en/latest/) (SMP) library in combination with [**PyTorch**](https://pytorch.org/) to implement a U-Net model for medical image segmentation.
+
+**Model:**
+>in_channels = 3, # model input channels
+
+>num_classes = 3, # model output channels
+
+>model = smp.Unet(encoder_name='efficientnet-b1', encoder_weights='imagenet', in_channels=3, num_classes=3)
 
 ### 4.3. Configurations
-This part outlines the configuration settings used for training and evaluation. It includes information on hyperparameters, optimization algorithms, loss function, metric, and any other settings that are crucial to the model's performance.
+**Loss Function:**
+
+>loss_fn = smp.losses.DiceLoss(mode='multilabel')
+
+**Metric:**
+
+>metric = torchmetrics.Dice(average='macro', num_classes=3).to(device)
+
+**Optimizer:**
+
+>optimizer = torch.optim.SGD(model.parameters(), lr=0.1, momentum=0.9)
 
 ### 4.4. Train
 Here, you'll find instructions and code related to the training of the segmentation model. This section covers the process of training the model on the provided dataset.
 
 ### 4.5. Evaluate
-In the evaluation section, the methods and metrics used to assess the model's performance are detailed. It explains how the model's segmentation results are quantified and provides insights into the model's effectiveness.
+
+**Plot learning curves:**
+
+![learning_curves](https://github.com/user-attachments/assets/5fd13855-2ef0-4c48-917b-145e735ee539)
+
+**model's segmentation result**
+
+![11](https://github.com/user-attachments/assets/a6b58fa8-fc7b-4b62-966d-e6b97aa0d91a)
+![13](https://github.com/user-attachments/assets/a74db686-db9b-41ba-8a3b-29d20179cf37)
+![14](https://github.com/user-attachments/assets/8588e040-aa00-44fa-9dfd-24eb143c7d8d)
+
+
+
+
