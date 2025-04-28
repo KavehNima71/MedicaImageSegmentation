@@ -77,9 +77,9 @@ This project utilizes the [**Segmentation Models PyTorch**](https://segmentation
 
 **Model:**
 >in_channels = 3, # model input channels
-
+>
 >num_classes = 3, # model output channels
-
+>
 >model = smp.Unet(encoder_name='efficientnet-b1', encoder_weights='imagenet', in_channels=3, num_classes=3)
 
 ### 4.3. Configurations
